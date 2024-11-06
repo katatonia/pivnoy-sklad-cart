@@ -1,62 +1,122 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Корзина</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
 
     <div class="wrapper">
 
         <header class="header">
-                <div class="container">
-                    <div class="header__body">
-                        <a class="header__logo" href="#">
-                            <img src="icons/logo.svg" width="80" height="40" alt="Логотип Пивного склада">
-                        </a>
-                        <button class="header__btn" type="button" aria-label="menu-btn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <nav class="header__nav">
-                            <ul class="menu">
-                                <li class="menu__item dropdown">
-                                    <button class="dropdown__btn" type="button" aria-label="dropdown-btn">О нас</button>
-                                    <div class="dropdown__content">
-                                      <a class="dropdown__link" href="https://pivnoysklad.ru/index.php?pageId=128">История</a>
-                                      <a class="dropdown__link" href="https://pivnoysklad.ru/index.php?pageId=123">Контакты</a>
-                                    </div>
-                                </li>
-                                <li class="menu__item dropdown">
-                                    <button class="dropdown__btn" type="button" aria-label="dropdown-btn">Магазин</button>
-                                    <div class="dropdown__content">
-                                      <a class="dropdown__link" href="https://pivnoysklad.ru/index.php?pageId=104">Пиво</a>
-                                      <a class="dropdown__link" href="https://pivnoysklad.ru/index.php?pageId=122">Сидры и медовухи</a>
-                                      <a class="dropdown__link" href="https://pivnoysklad.ru/index.php?pageId=124">Безалкогольное пиво</a>
-                                      <a class="dropdown__link" href="https://pivnoysklad.ru/index.php?pageId=130">Сок</a>
-                                      <a class="dropdown__link" href="https://pivnoysklad.ru/index.php?pageId=125">Безалкогольные напитки</a>
-                                    </div>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="https://pivnoysklad.ru/index.php?pageId=106">Избранное</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="https://pivnoysklad.ru/index.php?pageId=118">Корзина</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="https://pivnoysklad.ru/index.php?pageId=93">Войти</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+            <div class="container">
+                <div class="header__body">
+                    <a class="header__logo" href="#">
+                        <img src="icons/logo.svg" width="80" height="40" alt="Логотип Пивного склада">
+                    </a>
+                    <button class="header__btn" type="button" aria-label="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="menu">
+                            <li class="menu__item dropdown">
+                                <button class="dropdown__btn" type="button" aria-label="dropdown-btn">О нас</button>
+                                <div class="dropdown__content">
+                                    <a class="dropdown__link"
+                                        href="https://pivnoysklad.ru/index.php?pageId=128">История</a>
+                                    <a class="dropdown__link"
+                                        href="https://pivnoysklad.ru/index.php?pageId=123">Контакты</a>
+                                </div>
+                            </li>
+                            <li class="menu__item dropdown">
+                                <button class="dropdown__btn" type="button" aria-label="dropdown-btn">Магазин</button>
+                                <div class="dropdown__content">
+                                    <a class="dropdown__link"
+                                        href="https://pivnoysklad.ru/index.php?pageId=104">Пиво</a>
+                                    <a class="dropdown__link" href="https://pivnoysklad.ru/index.php?pageId=122">Сидры и
+                                        медовухи</a>
+                                    <a class="dropdown__link"
+                                        href="https://pivnoysklad.ru/index.php?pageId=124">Безалкогольное пиво</a>
+                                    <a class="dropdown__link" href="https://pivnoysklad.ru/index.php?pageId=130">Сок</a>
+                                    <a class="dropdown__link"
+                                        href="https://pivnoysklad.ru/index.php?pageId=125">Безалкогольные напитки</a>
+                                </div>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="https://pivnoysklad.ru/index.php?pageId=106">Избранное</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="https://pivnoysklad.ru/index.php?pageId=118">Корзина</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="https://pivnoysklad.ru/index.php?pageId=93">Войти</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+            </div>
         </header>
 
         <main class="main">
 
+            <section class="checkout">
+                <div class="container">
+                    <div class="checkout__wrapper">
+                        <h2 class="checkout__title">Корзина</h2>
+                        <div class="checkout__cart cart">
+                            <ul class="cart__list">
+                                <li class="cart__item cart__item_title">
+                                    <span>Объём</span>
+                                    <span>Количество</span>
+                                    <span>Стоимость</span>
+                                    <span>Сумма</span>
+                                    <span>Действия</span>
+                                </li>
+                                <li class="cart__item">
+                                    <img class="cart__img" src="img/item.png" width="120" height="120"
+                                        alt="Пивная банка и стакан пива">
+                                    <span class="cart__vol">0.5</span>
+                                    <span class="cart__amount">
+                                        <button type="button" aria-label="amount-butn"></button>
+                                        <input type="number" value="1" min="0" step="1" aria-label="current-quantity">1
+                                        <button type="button" aria-label="amount-butn"></button>
+                                    </span>
+                                    <span class="cart__price">275 руб.</span>
+                                    <span class="cart__summ">275 руб.</span>
+                                    <div class="cart__actions">
+                                        <span>Удалить</span>
+                                        <span>Подтвердить</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="checkout__title">Доставка</h2>
+                        <div class="checkout__delivery delivery">
+                            <form action="#" method="post">
+                                <label>Имя
+                                    <input type="text" name="name" id="name">
+                                </label>
+                                <label>Телефон
+                                    <input type="number" name="phone" id="phone">
+                                </label>
+                                <label>E-mail
+                                    <input type="email" name="email" id="email">
+                                </label>
+                                <label>Комментарий
+                                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                                </label>
+                            </form>
+                            <button type="button" aria-label="order-button">Заказать</button>
+                        </div>¸
+                    </div>
+                </div>
+            </section>
 
         </main>
 
@@ -69,4 +129,5 @@
     <script type="module" src="js/script.js"></script>
 
 </body>
+
 </html>

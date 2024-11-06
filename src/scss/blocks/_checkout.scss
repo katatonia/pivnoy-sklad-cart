@@ -1,0 +1,17 @@
+@use "base/var";
+
+.checkout {
+    margin-top: 120px;
+
+    &__wrapper {
+        padding: 200px 0;
+    }
+
+    &__title {
+        font: {
+            size: 3rem;
+            style: italic;
+        }
+        margin: 2rem;
+    }
+}
