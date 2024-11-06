@@ -5,25 +5,103 @@
 
 	&__btn {
 		cursor: pointer;
-        height: 120px;
-	}
-
-	&__content {
-		display: none;
 	}
 
 	&__link {
+		position: relative;
 		display: block;
+		background-color: wheat;
+		border-radius: 5px;
+		padding: 5px 40px 5px 5px;
+		font-style: italic;
+
+		&:after {
+			position: absolute;
+			content: "";
+			width: 15px;
+			height: 15px;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%);
+			background-image: url("../icons/arrow-right.svg");
+			background-repeat: no-repeat;
+		}
 	}
 
-	&:hover .dropdown__content {
-        position: absolute;
-        left: 0;
-        width: 12.5rem;
-        background-color: var.$white;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+	&__btn {
+		height: 120px;
+		position: relative;
+		padding-right: 25px;
+
+		&:after {
+			position: absolute;
+			content: "";
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			width: 15px;
+			height: 15px;
+			background-image: url("../icons/arrow-btn.svg");
+			background-repeat: no-repeat;
+		}
+	}
+
+	@media (min-width: 768px) {
+		&__content {
+			display: none;
+
+			&_active {
+				position: absolute;
+				left: 0;
+				background-color: var.$white;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				width: max-content;
+			}
+		}
+		&:hover .dropdown__content {
+			position: absolute;
+			left: 0;
+			background-color: var.$white;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			width: max-content;
+		}
+	}
+
+	@media (max-width: var.$vp-767) {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+
+		&__btn {
+			font-weight: 500;
+			height: fit-content;
+			margin-bottom: 15px;
+			position: relative;
+		}
+
+		&__link {
+			padding-bottom: 10px;
+		}
+
+		&__content {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.4s ease;
+
+			&_active {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				max-height: 300px;
+			}
+		}
 	}
 }
