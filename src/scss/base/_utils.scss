@@ -1,0 +1,25 @@
+@use "var";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main  {
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @media (max-width: var.$vp-767) {
+        padding: 0 20px;
+    }
+}
+
+.lock {
+    overflow: hidden;
+}

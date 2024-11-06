@@ -1,0 +1,29 @@
+@use "base/var";
+
+.dropdown {
+	position: relative;
+
+	&__btn {
+		cursor: pointer;
+        height: 120px;
+	}
+
+	&__content {
+		display: none;
+	}
+
+	&__link {
+		display: block;
+	}
+
+	&:hover .dropdown__content {
+        position: absolute;
+        left: 0;
+        width: 12.5rem;
+        background-color: var.$white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+	}
+}
