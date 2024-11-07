@@ -2,9 +2,19 @@
 
 .checkout {
     margin-top: 120px;
+    padding-bottom: 20px;
 
     &__wrapper {
-        padding: 200px 0;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__item {
+        border: 1px solid var.$black;
+		border-radius: 30px;
+		display: flex;
+		flex-direction: column;
+        align-items: center;
     }
 
     &__title {
@@ -12,6 +22,6 @@
             size: 3rem;
             style: italic;
         }
-        margin: 2rem;
+        padding: 50px;
     }
 }

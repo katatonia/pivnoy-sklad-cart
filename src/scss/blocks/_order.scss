@@ -1,0 +1,68 @@
+@use "base/var";
+
+.order {
+    padding: 30px 20px;
+    height: fit-content;
+
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+
+		label {
+			width: 100%;
+			gap: 10px;
+			display: flex;
+            flex-direction: column;
+			align-items: flex-start;
+			font-style: italic;
+
+			span {
+				padding-left: 10px;
+				flex-shrink: 0;
+			}
+		}
+
+		input {
+			padding: 10px 15px;
+			border-radius: 50px;
+			width: 100%;
+			background-color: white;
+			border: 1px solid black;
+		}
+
+		textarea {
+			padding: 15px 20px;
+			scrollbar-width: none;
+			border-radius: 20px;
+			border: 1px solid black;
+			font-size: inherit;
+		}
+
+        textarea,
+        input {
+            font: {
+                family: "Montserrat", "Arial", sans-serif;
+                style: italic;
+                size: inherit;
+            }
+        }
+    }
+
+    &__btn {
+        padding: 20px;
+        border-radius: 50px;
+        background-color: black;
+        cursor: pointer;
+        width: 100%;
+        color: white;
+        margin-top: 30px;
+        font: {
+            size: 1.2rem;
+            weight: 500;
+        }
+    }
+}

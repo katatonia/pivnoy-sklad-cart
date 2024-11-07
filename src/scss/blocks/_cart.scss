@@ -3,45 +3,50 @@
 .cart {
 	display: flex;
 	flex-direction: column;
-
-	&__list {
-		border: 1px solid var.$black;
-		border-radius: 30px;
-	}
+	padding: 10px 20px 30px;
 
 	&__item {
+		border-bottom: 1px solid #000;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		padding: 20px;
+
+		&_title .cart__elem {
+			font-weight: 500;
+		}
+	}
+
+	&__elem {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		border-bottom: 1px solid var.$black;
-		padding: 20px;
-		margin: 0 20px;
+		justify-content: center;
+		font-style: italic;
 
-		&_title {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+		&_link {
+			cursor: pointer;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px;
 		}
 	}
 
 	&__amount {
 		position: relative;
-		padding: 15px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
 		input {
-            background-color: rgba(0, 0, 0, 0);
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            border: 1px solid black;
-            padding: 5px;
-            width: 25px;
-            height: 25px;
-            margin: 5px;
-            border-radius: 7px;
+			font-family: "Montserrat", "Arial", sans-serif;
+			border: 1px solid black;
+			padding: 5px;
+			width: 34px;
+			height: 34px;
+			margin: 5px;
+			border-radius: 7px;
+			color: black;
+			display: block;
+			text-align: center;
 		}
 
 		button {
@@ -49,12 +54,21 @@
 			height: 24px;
 			background-color: black;
 			border-radius: 50%;
+			cursor: pointer;
 		}
 	}
 
 	&__actions {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-end;
+		gap: 15px;
+
+		span {
+			width: 24px;
+			height: 24px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+		}
 	}
 }

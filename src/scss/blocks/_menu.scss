@@ -3,10 +3,10 @@
 .menu {
 	display: flex;
 	align-items: center;
-	cursor: pointer;
 
 	&__item {
 		padding: 60px 20px;
+		cursor: pointer;
 	}
 
 	@media (min-width: 768px) {
