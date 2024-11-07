@@ -40,6 +40,7 @@
 			border-radius: 20px;
 			border: 1px solid black;
 			font-size: inherit;
+			width: 100%;
 		}
 
         textarea,
@@ -57,7 +58,7 @@
         border-radius: 50px;
         background-color: black;
         cursor: pointer;
-        width: 100%;
+        width: 90%;
         color: white;
         margin-top: 30px;
         font: {
@@ -65,4 +66,13 @@
             weight: 500;
         }
     }
+
+	@media (max-width: var.$vp-1023) {
+		max-width: 500px;
+		margin: 0 auto;
+
+		&__form {
+			width: 100%;
+		}
+	}
 }
