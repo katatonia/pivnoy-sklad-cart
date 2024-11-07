@@ -32,6 +32,13 @@
 			width: 100%;
 			background-color: white;
 			border: 1px solid black;
+
+			&::placeholder {
+				font: {
+					size: inherit;
+					weight: inherit;
+				}
+			}
 		}
 
 		textarea {
@@ -66,6 +73,14 @@
             weight: 500;
         }
     }
+
+	&__qr {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		margin-top: 20px;
+	}
 
 	@media (max-width: var.$vp-1023) {
 		max-width: 500px;
