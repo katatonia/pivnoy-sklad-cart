@@ -80,6 +80,10 @@
 		gap: 10px;
 		cursor: pointer;
 		margin-top: 20px;
+
+		span {
+			border-bottom: 1px solid black;
+		}
 	}
 
 	@media (max-width: var.$vp-1023) {
