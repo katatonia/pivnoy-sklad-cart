@@ -32,4 +32,10 @@
             flex-direction: column;
         }
     }
+
+    @media (max-width: var.$vp-767) {
+        &__title {
+            padding: 2rem;
+        }
+    }
 }
