@@ -14,6 +14,11 @@
 		background-color: var.$pattens-blue;
 		padding: 5px 40px 5px 5px;
 		font-style: italic;
+		transition: .3s;
+
+		&:hover {
+			opacity: .5;
+		}
 
 		&:after {
 			position: absolute;
@@ -61,6 +66,7 @@
 				width: max-content;
 			}
 		}
+
 		&:hover .dropdown__content {
 			position: absolute;
 			left: 0;
