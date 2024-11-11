@@ -10,7 +10,7 @@
 	}
 
 	&__item {
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid var.$black;
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		padding: 20px;
@@ -91,6 +91,11 @@
 			svg {
 				width: 24px;
 				height: 24px;
+				transition: .3s;
+
+				&:hover {
+					opacity: .5;
+				}
 			}
 		}
 	}
