@@ -27,7 +27,7 @@
 		padding: 3rem;
 	}
 
-	@media (max-width: 1440px) {
+	@media (max-width: var.$vp-1439) {
 		&__wrapper {
 			flex-direction: column;
 		}
