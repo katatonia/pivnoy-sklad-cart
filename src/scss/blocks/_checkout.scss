@@ -1,41 +1,41 @@
 @use "base/var";
 
 .checkout {
-    margin-top: 7.5rem;
-    padding-bottom: 3.75rem;
+	margin-top: 7.5rem;
+	padding-bottom: 3.75rem;
 
-    &__wrapper {
-        display: flex;
-        gap: 30px;
-    }
+	&__wrapper {
+		display: flex;
+		gap: 30px;
+	}
 
-    &__item {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	&__item {
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 		border-radius: 30px;
 		display: flex;
 		flex-direction: column;
-        align-items: center;
-        background-color: var.$white;
-        height: fit-content;
-    }
+		align-items: center;
+		background-color: var.$white;
+		height: fit-content;
+	}
 
-    &__title {
-        font: {
-            size: 2rem;
-            style: italic;
-        }
-        padding: 3rem;
-    }
+	&__title {
+		font: {
+			size: 2rem;
+			style: italic;
+		}
+		padding: 3rem;
+	}
 
-    @media (max-width: var.$vp-1023) {
-        &__wrapper {
-            flex-direction: column;
-        }
-    }
+	@media (max-width: 1440px) {
+		&__wrapper {
+			flex-direction: column;
+		}
+	}
 
-    @media (max-width: var.$vp-767) {
-        &__title {
-            padding: 2rem;
-        }
-    }
+	@media (max-width: var.$vp-767) {
+		&__title {
+			padding: 2rem;
+		}
+	}
 }

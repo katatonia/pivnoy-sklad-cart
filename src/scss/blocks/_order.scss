@@ -3,6 +3,9 @@
 .order {
     padding: 30px 20px;
     height: fit-content;
+	max-width: 400px;
+	width: 100%;
+	margin-left: auto;
 
 	form {
 		display: flex;
@@ -88,9 +91,6 @@
 	}
 
 	@media (max-width: var.$vp-1023) {
-		max-width: 500px;
-		margin: 0 auto;
-
 		&__form {
 			width: 100%;
 		}
