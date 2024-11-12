@@ -1,32 +1,32 @@
 @use "base/var";
 
 .order {
-    padding: 30px 20px;
-    height: fit-content;
+	padding: 30px 20px;
+	height: fit-content;
 	max-width: 400px;
 	width: 100%;
 	margin-left: auto;
 
-	form {
+	&__form {
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: flex-end;
 		width: 100%;
+	}
 
-		label {
-			width: 100%;
-			gap: 10px;
-			display: flex;
-            flex-direction: column;
-			align-items: flex-start;
-			font-style: italic;
+	&__field {
+		width: 100%;
+		gap: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		font-style: italic;
 
-			span {
-				padding-left: 10px;
-				flex-shrink: 0;
-			}
+		span {
+			padding-left: 10px;
+			flex-shrink: 0;
 		}
 
 		input {
@@ -53,29 +53,29 @@
 			width: 100%;
 		}
 
-        textarea,
-        input {
-            font: {
-                family: "Montserrat", "Arial", sans-serif;
-                style: italic;
-                size: inherit;
-            }
-        }
-    }
+		textarea,
+		input {
+			font: {
+				family: "Montserrat", "Arial", sans-serif;
+				style: italic;
+				size: inherit;
+			}
+		}
+	}
 
-    &__btn {
-        padding: 20px;
-        border-radius: 50px;
-        background-color: black;
-        cursor: pointer;
-        width: 90%;
-        color: white;
-        margin-top: 30px;
-        font: {
-            size: 1.2rem;
-            weight: 500;
-        }
-    }
+	&__btn {
+		padding: 20px;
+		border-radius: 50px;
+		background-color: black;
+		cursor: pointer;
+		width: 90%;
+		color: white;
+		margin-top: 30px;
+		font: {
+			size: 1.2rem;
+			weight: 500;
+		}
+	}
 
 	&__qr {
 		display: flex;
@@ -94,5 +94,10 @@
 		&__form {
 			width: 100%;
 		}
+	}
+
+	@media (max-width: var.$vp-767) {
+		margin: 0 auto;
+		max-width: 100%;
 	}
 }

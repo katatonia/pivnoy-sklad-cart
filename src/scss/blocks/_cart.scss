@@ -3,7 +3,6 @@
 .cart {
 	display: flex;
 	flex-direction: column;
-	padding: 10px 20px 30px;
 	width: 100%;
 
 	&__list {
@@ -13,9 +12,11 @@
 	&__item {
 		border-bottom: 1px solid var.$black;
 		display: grid;
-		grid-template-columns: repeat(7, 1fr);
-		padding: 20px;
-		row-gap: 20px;
+		grid-template-columns: auto 1fr 1fr 1fr;
+		grid-template-rows: repeat(1, 1fr);
+		column-gap: 20px;
+		row-gap: 10px;
+		padding: 20px 0;
 
 		&_title .cart__elem {
 			font: {
@@ -36,10 +37,13 @@
 			flex-direction: column;
 			align-items: center;
 			gap: 10px;
+			grid-area: 1 / 2 / 2 / 3;
+			align-items: flex-start;
 
 			a {
 				display: block;
 				text-align: center;
+				text-align: left;
 			}
 		}
 	}
@@ -81,7 +85,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
+		justify-content: flex-end;
 		gap: 10px;
+		grid-area: 1 / 4 / 4 / 5;
+		height: 100%;
 	}
 
 	&__actions-item {
@@ -119,62 +126,30 @@
 	}
 
 	&__summ {
+		grid-area: 3 / 3 / 4 / 4;
+
 		span {
-			display: none;
+			display: block;
+			padding-right: 10px;
 		}
 	}
 
-	@media (max-width: var.$vp-1439) {
-		&__item {
-			display: grid;
-			grid-template-columns: auto 1fr 1fr 1fr;
-			grid-template-rows: repeat(1, 1fr);
-			column-gap: 20px;
-			padding: 20px 0;
+	&__img {
+		grid-area: 1 / 1 / 4 / 2;
+	}
 
-			&_title {
-				display: none;
-			}
-		}
+	&__vol {
+		grid-area: 2 / 2 / 3 / 3;
+		justify-content: flex-start;
+	}
 
-		&__img {
-			grid-area: 1 / 1 / 4 / 2;
-		}
+	&__price {
+		grid-area: 3 / 2 / 4 / 3;
+		justify-content: flex-start;
+	}
 
-		&__elem {
-			&_link {
-				grid-area: 1 / 2 / 2 / 3;
-				align-items: flex-start;
-
-				a {
-					text-align: left;
-				}
-			}
-		}
-
-		&__vol {
-			grid-area: 2 / 2 / 3 / 3;
-			justify-content: flex-start;
-		}
-
-		&__price {
-			grid-area: 3 / 2 / 4 / 3;
-			justify-content: flex-start;
-		}
-
-		&__amount {
-			grid-area: 1 / 3 / 3 / 4;
-		}
-
-		&__summ {
-			grid-area: 3 / 3 / 4 / 4;
-		}
-
-		&__actions {
-			grid-area: 1 / 4 / 4 / 5;
-			height: 100%;
-			justify-content: space-around;
-		}
+	&__amount {
+		grid-area: 1 / 3 / 3 / 4;
 	}
 
 	@media (max-width: var.$vp-767) {
@@ -216,11 +191,6 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 			gap: 5px;
-
-			span {
-				display: block;
-				padding-right: 10px;
-			}
 		}
 
 		&__actions {
