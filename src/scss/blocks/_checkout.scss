@@ -26,7 +26,8 @@
 			size: 2rem;
 			style: italic;
 		}
-		padding: 3rem;
+		padding: 30px;
+		padding-left: 20px;
 	}
 
 	&__summ {
@@ -48,10 +49,6 @@
 		}
 	}
 
-	&__summ-title {
-		text-transform: uppercase;
-	}
-
 	&__summ-input {
 		border: none;
 	}
@@ -59,12 +56,6 @@
 	@media (max-width: var.$vp-1439) {
 		&__wrapper {
 			flex-direction: column;
-		}
-	}
-
-	@media (max-width: var.$vp-767) {
-		&__title {
-			padding: 2rem;
 		}
 	}
 }
