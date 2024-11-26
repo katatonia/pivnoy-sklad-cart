@@ -20,7 +20,7 @@
 	}
 
 	&__body {
-		height: 120px;
+		height: 80px;
 		position: relative;
 		display: flex;
 		justify-content: space-between;
@@ -40,11 +40,7 @@
 
     //MOBILE MENU
     @media (max-width: var.$vp-767) {
-		&__body {
-			height: 80px;
-		}
-
-        &__logo {
+		&__logo {
             width: 100px;
             height: auto;
 
