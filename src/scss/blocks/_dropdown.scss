@@ -12,11 +12,11 @@
 		position: relative;
 		display: block;
 		padding: 5px 40px 5px 5px;
-		transition: .3s;
+		transition: 0.3s;
 		font-size: 16px;
 
 		&:hover {
-			opacity: .5;
+			opacity: 0.5;
 		}
 	}
 
@@ -58,13 +58,12 @@
 			position: absolute;
 			left: 0;
 			background-color: var.$white;
-			padding: 20px;
+			padding: 10px;
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
-			width: max-content;
-			box-shadow: 0 4px 12px rgba(0,0,0,.2);
-			margin-top: 12px;
+			max-width: 200px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 		}
 	}
 
@@ -93,11 +92,9 @@
 			width: 100%;
 
 			&_active {
-				display: flex;
-				flex-direction: column;
-				gap: 15px;
-				max-height: 300px;
-				margin-top: 15px;
+				max-height: 300px; // Ограничение высоты dropdown
+				overflow-y: auto; // Скролл, если контент внутри превышает высоту
+				padding: 15px; // Внутренние отступы
 			}
 		}
 	}

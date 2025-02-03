@@ -2,10 +2,15 @@
 
 .menu {
 	display: flex;
+	padding: 20px; // Внутренние отступы
+	gap: 20px; // Отступы между элементами
 	align-items: center;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-around;
 
 	&__item {
-		padding: 15px;
+		// padding: 15px; Удалить внутренний отступ
 		cursor: pointer;
 	}
 
@@ -15,6 +20,9 @@
 
 	@media (max-width: var.$vp-767) {
 		width: 100%;
+		flex-direction: column;
+		overflow-y: auto; // Скролл, если контент превышает высоту экрана
+		max-height: calc(100vh - 80px); // Расчёт высоты меню
 
 		&__item {
 			width: 100%;

@@ -19,6 +19,10 @@
 		box-shadow: 0 4px 12px rgba(0,0,0,.2);
 	}
 
+	&_nav {
+		width: 100%;
+	}
+
 	&__body {
 		height: 80px;
 		position: relative;
@@ -108,11 +112,14 @@
 			background-color: var.$white;
 			transition: all 0.3s ease;
 			display: flex;
-			align-items: flex-start;
-			justify-content: flex-start;
+			flex-direction: column; // Направление элементов
+			overflow-y: auto; // Вертикальный скролл
+			-webkit-overflow-scrolling: touch; // Поддержка плавного скролла на iOS
 
 			&_active {
 				right: 0;
+				height: calc(100vh - 80px); // Расчёт высоты header
+				overflow-y: auto; // Скролл активного меню
 			}
 		}
 
